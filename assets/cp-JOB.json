@@ -1,0 +1,11 @@
+{
+  "JOB": {
+	"Type": "ConnectionProfile:ApplicationIntegrator:AI JOB",
+	"AI-Access Key Id": "AWS Access Key ",
+	"AI-Secret Access Key": "Secret Access Key value",
+	"AI-RESTHost": "AWS M2 Endpoint host",
+	"AI-region": "AWS region",
+	"Description": "This is a connection profile for AWS Mainframe Modernization",
+	"Centralized": true
+   }
+}

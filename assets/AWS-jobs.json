@@ -1,0 +1,48 @@
+{
+  "Defaults" : {
+		"RunAs" : "JOB", "Application": "bankdemo", "SubApplication" : "M2",
+		"Description" : "Banking job flow run on AWS Mainframe Modernization", "Host": "ip-10-0-3-77.us-west-2.compute.internal", 
+		"ControlmServer":"ip-172-31-60-16.us-w", "OrderMethod": "Manual", 
+		
+		"Job": {"actionIfError" : {"Type": "If", "CompletionStatus":"NOTOK", "mailTeam": 
+			     {"Type": "Mail", "Message": "Job %%JOBNAME failed", "Subject": "Error occurred", "To": "support@amazon.com"}}
+		}
+	},
+  "M2_Jobs": {
+    "Type": "Folder",
+    
+    "JOB1": {"Type": "Job:ApplicationIntegrator:AI M2JOB",
+      "ConnectionProfile": "JOB",
+      "AI-M2 Application Id": "coczwktgb5ddxhfjkxelah7tzi",
+      "AI-Job Name": "JOB1",
+      "AI-Status Polling Frequency": "5"
+    },
+    "JOB2": {"Type": "Job:ApplicationIntegrator:AI M2JOB",
+      "ConnectionProfile": "JOB",
+      "AI-M2 Application Id": "coczwktgb5ddxhfjkxelah7tzi",
+      "AI-Job Name": "SYNTXERR",
+      "AI-Status Polling Frequency": "5"
+    },
+    "JOB3": {"Type": "Job:ApplicationIntegrator:AI M2JOB",
+      "ConnectionProfile": "JOB",
+      "AI-M2 Application Id": "coczwktgb5ddxhfjkxelah7tzi",
+      "AI-Job Name": "JOB3",
+      "AI-Status Polling Frequency": "5"
+    },
+    "JOB4": {"Type": "Job:ApplicationIntegrator:AI M2JOB",
+      "ConnectionProfile": "JOB",
+      "AI-M2 Application Id": "coczwktgb5ddxhfjkxelah7tzi",
+      "AI-Job Name": "JOB4",
+      "AI-Status Polling Frequency": "5"
+    },
+    "JOB5": {"Type": "Job:ApplicationIntegrator:AI M2JOB",
+      "ConnectionProfile": "JOB",
+      "AI-M2 Application Id": "coczwktgb5ddxhfjkxelah7tzi",
+      "AI-Job Name": "JOB5",
+      "AI-Status Polling Frequency": "5"
+    },
+
+    "flow01": {"Type":"Flow", "Sequence":["JOB1", "JOB2", "JOB3", "JOB5"]},
+    "flow02": {"Type":"Flow", "Sequence":["JOB2", "JOB4", "JOB5"]}
+  }
+}
