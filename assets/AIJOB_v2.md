@@ -2,7 +2,7 @@
 The `AIJOB_v2.ctmai` file is a base64 encoded job definition exported out of the BMC Control-M Application Integrator tool. It is based upon the original `AIJOB.ctmai` that was published in this project. It has been enhanced to improve the supportability of deploying and managing Mainframe Modernization Blu Age jobs within Control-M.
 
 ### Pre-requisites
-This job definition requires BMC Control-M version 9.0.20.200 or above and relies upon [jq cli](https://jqlang.github.io/jq/) to be installed on the Control-M agent where the job is executing. Also recommend modifying the M2 application logback configuration to be something similar to this example [logback.xml](logback.xml) config file. This configuration will ensure that the application log data forwarded to CloudWatch has the job name on each message.
+This job definition requires BMC Control-M version 9.0.20.200 or above and relies upon [jq cli](https://jqlang.github.io/jq/) to be installed on the Control-M agent where the job is executing. Also recommend modifying the M2 application Logback configuration to be something similar to this example [logback.xml](logback.xml) config file. This configuration will ensure that the application log data forwarded to CloudWatch has the job name on each message. For more information about M2 Blu Age application configuration, please see the [AWS Mainframe Modernization User Guide](https://docs.aws.amazon.com/m2/latest/userguide/ba-app-config.html).
 
 ### Connection Profile
 - `access_key_id` - AWS IAM access key to authenticate to the M2 API
