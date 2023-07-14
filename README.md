@@ -11,11 +11,13 @@ AWS Services that are used in this solutions are:
 ## Components details
 Be sure to:
 
-[assets/AIJOB.ctmai](assets/AIJOB.ctmai) - This is a job defintion file. The job type deployment is usually a one-time activity. 
+[assets/AIJOB.ctmai](assets/AIJOB.ctmai) - This is a job definition file. The job type deployment is usually a one-time activity.
 
-[assets/AWS-jobs.json](assets/AWS-jobs.json) - This job file is a business process that you schedule or run in your enterprise environment.  
+[assets/AIJOB_v2.ctmai](assets/AIJOB_v2.ctmai) - An updated version of the job definition file specifically for use with AWS Mainframe Modernization Blu Age jobs. See the [AIJOB_v2 Job Definition](assets/AIJOB_v2.md) for more information on what has been updated.
 
-[assets/cp-JOB.json ](assets/cp-JOB.json) - This file is Connection profiles specific for AWS connectivity and is used to define access methods and security credentials for a specific application. They can be referenced by multiple jobs. To do this, you must deploy the connection profile definition before running the relevant jobs.   
+[assets/AWS-jobs.json](assets/AWS-jobs.json) - This job file is a business process that you schedule or run in your enterprise environment.
+
+[assets/cp-JOB.json ](assets/cp-JOB.json) - This file is Connection profiles specific for AWS connectivity and is used to define access methods and security credentials for a specific application. They can be referenced by multiple jobs. To do this, you must deploy the connection profile definition before running the relevant jobs.
 
 ## Security
 
@@ -24,4 +26,3 @@ See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more inform
 ## License
 
 This library is licensed under the MIT-0 License. See the LICENSE file.
-

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE XML>
+<configuration>
+	<!-- Custom log appender to capture the jobName on every log message -->
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<layout>
+			<Pattern>%date{yyyy-MM-dd' 'HH:mm:ss.SSS} %-4r [%thread] [%X{jobName}] %-5level - %msg%n</Pattern>
+		</layout>
+	</appender>
+
+	<root level="INFO">
+		<appender-ref ref="CONSOLE" />
+	</root>
+
+</configuration>
