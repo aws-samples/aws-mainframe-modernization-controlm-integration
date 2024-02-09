@@ -12,8 +12,9 @@ This job definition requires BMC Control-M version 9.0.20.200 or above and relie
 ### Job Properties
 - `CON_PRO` - Connection profile that is to be used with this job
 - `m2_app_name`- M2 Blu Age application name that this job is deployed within
-- `job_name` - Name of the Blu Age batch job JCL groovy script to be executed **Note:** Don't include the `.jcl.groovy` extension on the job name
-- `polling_frequency` - How often in seconds that Control-M will check the status of the batch job execution **Note:** Recommend a minimum of 10 seconds or more between requests to ensure the job execution logs get forwarded to CloudWatch before the Fetch CloudWatch Logs step
+- `job_name` - Name of the Blu Age batch job JCL groovy script to be executed <br>**Note:** Don't include the `.jcl.groovy` extension on the job name
+- `job_params` - A JSON object with the key/value pairs to be used as job parameters during the batch job execution API call `{"key1": "value1","key2": "value2"}`<br>**Note:** The default value for this parameter is an empty JSON object `{}`; if you don't need to pass parameters, an empty JSON object `{}` is needed otherwise the M2 API call will fail due to malformed JSON
+- `polling_frequency` - How often in seconds that Control-M will check the status of the batch job execution <br>**Note:** Recommend a minimum of 10 seconds or more between requests to ensure the job execution logs get forwarded to CloudWatch before the Fetch CloudWatch Logs step
 
 ### Step Details
 The job definition contains seven different execution steps. The following are the details for each step.
